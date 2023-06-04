@@ -1,7 +1,14 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
+// const inter = Inter({ subsets: ['latin'] })
 
-const inter = Inter({ subsets: ['latin'] })
+import {Nunito_Sans} from 'next/font/google'
+
+const nunitoSans = Nunito_Sans({
+  subsets: ['latin'],
+  weight: ['300', '600', '800'],
+  variable: '--font-nunitoSans',
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="{nunitoSans.variable} ">{children}</body>
     </html>
   )
 }
